@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= article.title%>_TOANOTHER.ME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="<?php echo $article->keywords?>"/>
+<meta name="description" content="<?php echo $article->description?>"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCoreEclipse.css"/>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+<div id="canvasWrapper">
+	<div id="canvas">
+		<div id="scale">
+			<div id="pagebody">
+				<div id="cheader"><span><a href="/">TOANOTHER.ME</a>&nbsp;&nbsp;in this world</span></div>
+				<div id="cbody" class="clear">
+					<div class="article">
+						<div class="postdate"> 
+							<span class="month"><%= helper.getMonthName(new Date(article.create_date))%></span> 
+							<span class="day"><%= helper.dateFormat(new Date(article.create_date), 'dd')%></span> 
+						</div>
+						<div class="avatar"> <img src="/images/avatar.jpg" alt="作者头像"/> </div>
+						<div class="title"> <span class="titlename"><%= article.title%></span> 
+							<span class="author">
+								[<%- !article.category ? '文章分类已删除' : '<a href="/cat/'+article.category._id + '">' + article.category.cat_name + '</a>'%>] by <%= article.author.nickname%> <%= helper.dateFormat(new Date(article.create_date), 'yyyy-MM-dd hh:mm:ss')%>
+							</span> 
+						</div>
+						<div class="content clear">
+							<p><%- article.content%></p>
+						</div>
+						<div class="line">
+							<div class="count"><span class="likeicon" aid="<?php echo $article->id;?>"></span><span><span><%= article.like_count%></span> 人喜欢</span></div>
+							<div class="readmore">
+								<!-- JiaThis Button BEGIN -->
+								<div class="jiathis_style">
+								<a href="http://www.jiathis.com/share?uid=1805636" class="jiathis jiathis_txt" target="_blank"><img src="http://v2.jiathis.com/code_mini/images/btn/v1/jiathis1.gif" border="0" /></a>
+								</div>
+								<script type="text/javascript" >
+								var jiathis_config={
+									data_track_clickback:true,
+									summary:"",
+									hideMore:false
+								}
+								</script>
+								<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+								<!-- JiaThis Button END -->
+							</div>
+						</div>
+					</div>
+					<div id="comment">
+						<!-- UY BEGIN -->
+						<div id="uyan_frame"></div>
+						<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js" async=""></script>
+						<!-- UY END -->
+					</div>
+					<%- include footer.html %>
+				</div>
+				</div>
+			</div>
+		</div>
+		<%- include sidebar.html %>
+		<div class="clear"></div>
+	</div>
+</div>
+<%- include tools.html %>
+</body>
+</html>

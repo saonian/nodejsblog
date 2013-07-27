@@ -1,0 +1,16 @@
+<div id="sidebar">
+	<div id="sidebar1"> <span class="title">Archives</span>
+		<ul>
+			<% archives.forEach(function(archive, index){ %>
+			<li><a href="/archives/<%= archive.year%>/<%= archive.month%>"><span class="name"><%= archive.archive%></span> <span class="count"><span>(</span><%= archive.total%><span>)</span></span></a></li>
+			<% }) %>
+		</ul>
+	</div>
+	<div id="sidebar2"> <span class="title">Categories</span>
+		<ul>
+			<% categories.forEach(function(category, index){ %>
+			<li><a href="/cat/<%= category._id%>"><span class="name"><%= category.cat_name%></span> <span class="count"><span>(</span><%= category.article_count%><span>)</span></span></a></li>
+			<% }) %>
+		</ul>
+	</div>
+</div>

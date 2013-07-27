@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TOANOTHER.ME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="another me,记录,交流,分享,博客"/>
+<meta name="description" content="给世界上的另一个我"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCoreEclipse.css"/>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+<div id="canvasWrapper">
+	<div id="canvas">
+		<div id="scale">
+			<div id="pagebody">
+				<div id="cheader"><span><a href="/">TOANOTHER.ME</a>&nbsp;&nbsp;in this world</span></div>
+				<div id="cbody" class="clear">
+					<div class="article">
+						<div class="postdate"> 
+							<span class="month"><%= helper.getMonthName(new Date())%></span> 
+							<span class="day"><%= helper.dateFormat(new Date(), 'dd')%></span> 
+						</div>
+						<div class="avatar"> 
+							<img src="/images/avatar.jpg" alt="作者头像"/> 
+						</div>
+						<div class="title"> 
+							<span class="titlename">
+								<a href="#">
+									页面没找到
+								</a>
+							</span> 
+							<span class="author"></span> 
+						</div>
+						<div class="content clear">
+							<p>页面没找到！<a href="/" style="color: red;">返回首页</a><br/><br/><br/><br/><br/><br/><br/><br/></p>
+						</div>
+						<div class="line">
+						</div>
+					</div>
+				</div>
+				<div id="cfooter">
+					<div class="page">
+					</div>
+					<div class="friendlylink">
+					<span>友情链接：</span>
+					<a href="http://codeigniter.org.cn/">CodeIgniter中国</a>
+					<a href="http://sae.sina.com.cn/">SinaSAE</a>
+					</div>
+					<div class="copyright">
+					©2013 toanother.me All rights reserved.Powered by <a href="http://ellislab.com/codeigniter" target="_blank">CodeIgniter</a>
+					<a href="http://sae.sina.com.cn/" title="SinaAppEngine" target="_blank"><img src="http://static.sae.sina.com.cn/image/poweredby/117X12px.gif"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<%- include tools.html %>
+</body>
+</html>

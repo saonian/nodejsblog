@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TOANOTHER.ME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="another me,记录,交流,分享,博客"/>
+<meta name="description" content="给世界上的另一个我"/>
+<link href="/style/style.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="/syntaxhighlighter/styles/shCoreEclipse.css"/>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="/syntaxhighlighter/scripts/shAutoloader.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+<div id="canvasWrapper">
+	<div id="canvas">
+		<div id="scale">
+			<div id="pagebody">
+				<div id="cheader"><span><a href="/">TOANOTHER.ME</a>&nbsp;&nbsp;in this world</span></div>
+				<div id="cbody" class="clear">
+					<% articles.forEach(function(article, index){ %>
+					<div class="article">
+						<div class="postdate"> 
+							<span class="month"><%= helper.getMonthName(new Date(article.create_date))%></span> 
+							<span class="day"><%= helper.dateFormat(new Date(article.create_date), 'dd')%></span> 
+						</div>
+						<div class="avatar"> 
+							<img src="/images/avatar.jpg" alt="作者头像"/> 
+						</div>
+						<div class="title"> 
+							<span class="titlename">
+								<a href="/topic/<%= article._id%>">
+									<%= article.title%>
+								</a>
+							</span> 
+							<span class="author">
+								[<%- !article.category ? '文章分类已删除' : '<a href="/cat/'+article.category._id + '">' + article.category.cat_name + '</a>'%>] by <%= article.author.nickname%> <%= helper.dateFormat(new Date(article.create_date), 'yyyy-MM-dd hh:mm:ss')%>
+							</span> 
+						</div>
+						<div class="content clear">
+							<p><%- helper.cutHtml(article.content, 500)%></p>
+						</div>
+						<div class="line">
+							<div class="count">
+								<span class="likeicon" aid="<%= article._id%>"></span>
+								<span><span><%= article.like_count%></span> 人喜欢</span>
+							</div>
+							<div class="readmore"> 
+								<span><a href="/topic/<%= article._id%>">阅读全文</a></span> 
+							</div>
+						</div>
+					</div>
+					<% }) %>
+				</div>
+				<%- include footer.html %>
+			</div>
+		</div>
+		<%- include sidebar.html %>
+		<div class="clear"></div>
+	</div>
+</div>
+<%- include tools.html %>
+</body>
+</html>

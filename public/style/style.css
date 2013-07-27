@@ -1,0 +1,243 @@
+@charset "utf-8";
+::selection {
+    background: #000000; 
+    color:#FFFFFF;
+}
+::-moz-selection {
+    background: #000000; 
+    color:#FFFFFF;
+}
+::-webkit-selection {
+    background: #000000; 
+    color:#FFFFFF;
+}
+html, body, div, span, applet, object, iframe, /*h1, h2, h3, h4, h5, h6,*/ blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, p {
+	border: 0 none;
+	font-family: '微软雅黑', Arial, sans-serif;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0 none;
+	padding: 0;
+	vertical-align: baseline;
+	list-style: none;
+}
+body {
+	background: none repeat scroll 0 0 #F3F3F3;
+	color: black;
+	line-height: 1.5em;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #777777;
+	text-decoration: none;
+}
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+.disable {
+	color: #777777;
+}
+.clear {
+	clear: both;
+}
+#canvasWrapper {
+	background: url(http://liukai.sinaapp.com/public/images/blog_bg.gif) no-repeat scroll left top #F3F3F3;
+	width: 1100px;
+	padding: 0;
+	margin: 0;
+}
+#pagebody {
+	background: url(http://liukai.sinaapp.com/public/images/blog_bg_top.gif) no-repeat scroll left top #FFFFFF;
+	width: 720px;
+	margin-left: 10px;
+	height: auto;
+}
+#scale {
+	background: url(http://liukai.sinaapp.com/public/images/bg_cd.png) repeat-y scroll left top;
+	width: 740px;
+	margin-left: 67px;
+	float: left;
+}
+#cheader {
+	margin: 70px 0 70px 30px;
+	float: left;
+}
+#cheader span {
+	font-size: 16px;
+	color: #777777;
+}
+#cheader span a {
+	font-size: 30px;
+}
+#cfooter {
+	height: 110px;
+}
+#afooter {
+	height: 25px;
+}
+#cfooter .page {
+	background-color: #231F20;
+	color: #FFFFFF;
+	height: 35px;
+	text-align: center;
+	font-size: 13px;
+}
+#cfooter .page {
+	line-height:35px;
+}
+#cfooter .page a:link {
+	color: #FFFFFF;
+}
+#cfooter .page a:visited {
+	color: #FFFFFF;
+}
+#cfooter .page a:hover {
+	color: #FFFFFF;
+}
+#cfooter .page a:active {
+	color: #FFFFFF;
+}
+#cfooter .page .left {
+	float:left;
+	margin-left:20px;
+}
+#cfooter .page .right{
+	float:right;
+	margin-right:20px
+}
+#cbody .article {
+	padding: 0 30px 50px;
+}
+#cbody .article .avatar {
+	border: 0 solid;
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+    margin-top: 4px;
+}
+#cbody .article .avatar img {
+	width: 48px;
+	height: 48px;
+}
+#cbody .article .title {
+	float: left;
+	margin-left: 15px;
+	line-height: 30px;
+}
+#cbody .article .title span {
+	display: block;
+}
+#cbody .article .title .titlename {
+	font-size: 25px;
+	width: 575px;
+}
+#cbody .article .title .author {
+	font-size: 11px;
+	color: #333;
+}
+#cbody .article .content {
+	font-size: 13px;
+	color: #000000;
+	padding-top: 15px;
+	line-height: 25px;
+}
+#cbody .article .line {
+	border-top: 1px solid #E2E2E2;
+	margin-top: 15px;
+	padding-top: 10px;
+	height: 18px;
+	font-size: 11px;
+	position: relative;
+	text-align: right;
+}
+#cbody .article .line .count .likeicon {
+	background: url(http://liukai.sinaapp.com/public/images/icon_like.png) no-repeat scroll center center #999999;
+	border-radius: 50% 50% 50% 50%;
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#cbody .article .line .likeicon:hover {
+	background-color: #D10000;
+	width: 20px;
+	height: 20px;
+	transition: background-color 1s, width 1s, height 1s;
+	/*transform: rotate(360deg) scale(2.0);*/
+}
+#cbody .article .line span {
+	float: left;
+	line-height: 18px;
+}
+#cbody .article .line .readmore {
+	float: right;
+}
+#cbody .article .postdate {
+	height: 38px;
+	width: 78px;
+	margin-left: -109px;
+	float: left;
+	margin-top: 10px;
+	opacity: 0.8;
+	text-align: center;
+	background: #FCDD6E url(http://liukai.sinaapp.com/public/images/date-lines.png) no-repeat scroll right top;
+}
+#cbody .article .postdate span {
+	line-height: 38px;
+}
+#sidebar {
+	float: left;
+	font-size: 12px;
+	position: absolute;
+	top: 590px;
+	left: 807px;
+}
+#sidebar .count {
+	color: #AAAAAA;
+}
+#sidebar .title {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 20px;
+}
+#sidebar #sidebar1 {
+	float: left;
+	margin: 0 20px;
+}
+#sidebar #sidebar1 ul li {
+	list-style: none;
+}
+#sidebar #sidebar2 {
+	float: left;
+}
+#sidebar #sidebar2 ul li {
+	list-style: none;
+}
+#comment {
+	padding: 0 30px 50px;
+}
+.friendlylink {
+	text-align: left;
+	font-size: 12px;
+	margin: 10px 20px;
+}
+.friendlylink a {
+	margin-right: 7px;
+}
+.copyright {
+	text-align: center;
+	font-size: 12px;
+}

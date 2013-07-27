@@ -1,0 +1,10 @@
+.textfield_username {
+	background-image:url("/extjs/resources/images/user.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.textfield_password {
+	background-image:url("/extjs/resources/images/key.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}

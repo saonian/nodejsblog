@@ -1,0 +1,29 @@
+<div id="<%= currentPage ? 'cfooter' : 'afooter'%>">
+	<% if(currentPage){ %>
+	<div class="page">
+		<div class="left">第<%= currentPage%>/<%= totalPage%>页</div>
+		<div class="right">
+			<% if(currentPage-1 > 0){ %>
+			<a href="<%= baseUrl + '/' + (currentPage - 1)%>">&lt;&lt;上一页</a>
+			<% }else { %>
+			<a class="disable">&lt;&lt;上一页</a>
+			<% } %>
+			&nbsp;|&nbsp;
+			<% if(currentPage+1 <= totalPage){ %>
+			<a href="<%= baseUrl + '/' + (currentPage + 1)%>">下一页&gt;&gt;</a>
+			<% }else { %>
+			<a class="disable">下一页&gt;&gt;</a>
+			<% } %>
+		</div>
+	</div>
+	<div class="friendlylink">
+	<span>友情链接：</span>
+	<a href="http://codeigniter.org.cn/">CodeIgniter中国</a>
+	<a href="http://sae.sina.com.cn/">SinaSAE</a>
+	</div>
+	<% } %>
+	<div class="copyright">
+	©2013 toanother.me All rights reserved.Powered by <a href="http://ellislab.com/codeigniter" target="_blank">CodeIgniter</a>
+	<a href="http://sae.sina.com.cn/" title="SinaAppEngine" target="_blank"><img src="http://static.sae.sina.com.cn/image/poweredby/117X12px.gif"></a>
+	</div>
+</div>
